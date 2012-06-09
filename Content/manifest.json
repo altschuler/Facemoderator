@@ -1,0 +1,24 @@
+{
+	"name": "Facemoderator",
+	"version": "1.3.3.7",
+	"manifest_version": 1,
+	"description": "Jus. Jus dont.",
+	"run_at": "document_start",
+	"content_scripts": [
+		{
+			"matches": ["https://www.facebook.com/"],
+			"js": ["js/script.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon":"img/icon19.png",
+		"default_title": "Facemoderator",
+		"default_popup": "settings.html"
+	},
+	"icons": { 
+		"16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png" 
+    },
+	"background_page": "background.html"
+}

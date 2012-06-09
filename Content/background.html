@@ -1,0 +1,11 @@
+<script>
+	if (localStorage["timeout"] === undefined)
+		localStorage["timeout"] = 10;
+
+	if (localStorage["enabled"] === undefined)
+		localStorage["enabled"] = "true";
+
+	chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+	    sendResponse({timeout: localStorage["timeout"], enabled: localStorage["enabled"]});
+	});
+</script>
